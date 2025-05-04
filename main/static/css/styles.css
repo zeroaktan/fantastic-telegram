@@ -134,10 +134,26 @@ body {
     padding: 10px;
 }
 
-@media screen and (max-width: 600px) {
-    * {
-        box-sizing: 0;
-        padding: 0;
-        margin: 0;
+@media screen and (max-width: 1615px) {
+    #second-section {
+        padding: 30%;
+    }
+    #widgets {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    #second-section {
+        padding: 32%;
+    }
+}
+
+@media screen and (max-width: 1453px) {
+    #long-text-select {
+        display: none;
     }
 }
