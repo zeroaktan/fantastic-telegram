@@ -1,0 +1,145 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-04 12:20+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+#: .\main\templates\main\base.html:39
+msgid "Get Started"
+msgstr "Приступить"
+
+#: .\main\templates\main\index.html:9
+msgid "Find your passion, follow your path"
+msgstr "Найди свою страсть, следуй своим путём"
+
+#: .\main\templates\main\index.html:11
+msgid "Start"
+msgstr "Начать"
+
+#: .\main\templates\main\index.html:16
+msgid "Key Features"
+msgstr "Преимущества"
+
+#: .\main\templates\main\index.html:17
+msgid "Experience University Routine, Unnecessary to Apply"
+msgstr "Необязательно поступать, чтобы окунуться в студенческую жизнь"
+
+#: .\main\templates\main\index.html:18
+msgid ""
+"As choosing a profession is a crucial moment in applicants' life, we are "
+"taking it on another level. Our platform provides its clients attend virtual "
+"classes of colleges to explore the routine of future specialists."
+msgstr "Выбор профессии — важный этап в жизни абитуриентов, и мы выводим его на новый уровень. Наша платформа позволяет клиентам посещать виртуальные занятия колледжей, чтобы погрузиться в повседневную жизнь будущих специалистов."
+
+#: .\main\templates\main\index.html:22
+msgid "Real-Time Classroom Access"
+msgstr "Доступ к занятиям в реальном времени"
+
+#: .\main\templates\main\index.html:23
+msgid ""
+"Stream real university courses directly from the classroom. Experience the "
+"teaching style and content firsthand."
+msgstr "Транслируйте реальные университетские курсы прямо из аудитории. Ощутите стиль преподавания и содержание учебных материалов из первых рук."
+
+#: .\main\templates\main\index.html:27
+msgid "Review System"
+msgstr "Система отзывов"
+
+#: .\main\templates\main\index.html:28
+msgid ""
+"Leave reviews after attending virtual classes. Share your impressions and "
+"help others make informed decisions."
+msgstr "Оставляйте отзывы после посещения виртуальных занятий. Делитесь своими впечатлениями и помогайте другим принимать осознанные решения."
+
+#: .\main\templates\main\index.html:32
+msgid "Competetive Ranking"
+msgstr "Конкурентный рейтинг"
+
+#: .\main\templates\main\index.html:33
+msgid ""
+"Compare your ratings with others. See how courses you've attended stack up "
+"against ones you haven't explored yet."
+msgstr "Сравните свои оценки с другими. Узнайте, как курсы, которые вы посещали, соотносятся с теми, которые вы ещё не изучали."
+
+#: .\main\templates\main\index.html:38
+msgid "Feedback of Our Users"
+msgstr "Отзывы наших пользователей"
+
+#: .\main\templates\main\select.html:10
+msgid "Select a faculty & Attend its classes in real time"
+msgstr "Выберите факультет и посещайте его занятия в реальном времени"
+
+#: .\main\templates\main\select.html:11
+msgid ""
+"Our team specializes in career guidance for applicants, helping them "
+"confidently choose a profession and the right university. We analyze their "
+"interests, strengths, and skills to identify the direction where they have "
+"the best chance to succeed and feel fulfilled."
+msgstr "Наша команда специализируется на профессиональной ориентации абитуриентов, помогая им уверенно выбрать профессию и подходящий университет. Мы анализируем их интересы, сильные стороны и навыки, чтобы определить направление, в котором они смогут добиться успеха и чувствовать себя реализованными."
+
+#: .\main\templates\main\select.html:15
+msgid "Select Your Desired Specialty"
+msgstr "Выберите желаемую специальность"
+
+#: .\main\templates\main\selected.html:13
+msgid "Enjoy watching!"
+msgstr "Наслаждайтесь просмотром!"
+
+#: .\main\templates\main\selected.html:15
+msgid "If chosen video isn't playable, you may watch the video on YouTube"
+msgstr "Если выбранное видео недоступно для просмотра, вы можете посмотреть его на YouTube"
+
+#: .\main\templates\main\selected.html:17
+msgid "Continue Watching"
+msgstr "Продолжить просмотр"
+
+#: .\main\templates\main\selected.html:24
+msgid "Leave your opinion, We appreciate it"
+msgstr "Оставьте своё мнение, мы ценим это!"
+
+#: .\main\templates\main\selected.html:28
+msgid "Full Name"
+msgstr "Полное имя"
+
+#: .\main\templates\main\selected.html:32
+msgid "Your Opinion"
+msgstr "Ваше мнение"
+
+#: .\main\templates\main\selected.html:36
+msgid "Choose Image"
+msgstr "Выберите изображение"
+
+#: .\main\templates\main\selected.html:40
+msgid "Rate us out of 5 stars"
+msgstr "Оцените нас по пятизвёздочной шкале"
+
+#: .\main\templates\main\selected.html:44
+msgid "Submit Feedback"
+msgstr "Отправить отзыв"
+
+#: .\pathfinder\settings.py:121
+msgid "Russian"
+msgstr "Русский"
+
+#: .\pathfinder\settings.py:122
+msgid "English"
+msgstr "English"
+
+#: .\pathfinder\settings.py:123
+msgid "Kazakh"
+msgstr "Казахский"

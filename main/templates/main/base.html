@@ -1,0 +1,45 @@
+{% load static %}
+{% load i18n %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="icon" href="{% static 'images/minilogo.ico' %}">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+          --color-primary: #118AB2;
+          --color-primary-l: #073B4C;
+        }
+    </style>
+</head>
+<body>
+    <header id="header-nav" class="my-8 flex items-center justify-between mx-50">
+        <a href="{% url 'main:main_land' %}"><img src="{% static 'images/logo.png' %}" class="w-[250px] h-[42px] cursor-pointer"></a>
+        <div class="flex flex-row justify-center items-center gap-10">
+            <form action="{% url 'set_language' %}" method="post" class="cursor-pointer h-max w-max">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ redirect_to }}">
+                <select class="font-semibold text-lg appearance-none cursor-pointer flex justify-center items-center text-center" name="language" onchange='if(this.value != 0) { this.form.submit(); }'>
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for language in languages %}
+                        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                            {{ language.name_local }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </form>
+            <a href="{% url 'main:selection' %}"><button class="bg-primary hover:bg-primary-l transition-all duration-400 ease-in-out text-white p-4 w-[150px] rounded-4xl text-lg weight-bold sticky-top cursor-pointer">{%trans "Get Started"%}</button></a>
+        </div>
+    </header>
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>

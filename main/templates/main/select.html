@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}Выбор факультета{% endblock title %}
+
+{% block content %}
+    <section class="flex justify-between items-center px-50 gap-8" id="fir-section">
+        <img src="{% static 'images/crowd.png' %}">
+        <div class="flex flex-col">
+            <p class="text-right text-[50px] leading-none font-bold">{%trans "Select a faculty & Attend its classes in real time"%}</p>
+            <p class="text-right text-xl mt-12">{%trans "Our team specializes in career guidance for applicants, helping them confidently choose a profession and the right university. We analyze their interests, strengths, and skills to identify the direction where they have the best chance to succeed and feel fulfilled."%}</p>
+        </div>
+    </section>
+    <section class="flex justify-center flex-col items-center px-50 bg-primary/10" id="sec-section">
+        <p class="text-[45px] font-bold">{%trans "Select Your Desired Specialty"%}</p>
+        <div class="grid grid-cols-2 gap-x-8 gap-y-4 my-16" id="faculty-list">
+            {% for slug in faculty %}
+                <a class="text-3xl" href="{% url 'main:selected' slug.slug %}"><button class="cursor-pointer duration-400 bg-primary/40 hover:bg-primary/70 py-8 px-16 w-full rounded-md">{{ slug.name }}</button></a>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock content %}

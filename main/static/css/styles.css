@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&display=swap');
+
+:root {
+    --primary: #118AB2;
+    --primary-l: #073B4C;
+}
+
+.brighten {
+    background-color: hsl(var(--primary), 90%);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Anuphan", sans-serif;
+}
+
+body {
+    height: 10vw;
+    width: 100%;
+}
+
+#second-section {
+    height: 35vw;
+}
+
+#feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-inline: 50px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.1s;
+    height: 220px;
+}
+
+#feature #text {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#feature:hover {
+    transform: scale(1.1);
+}
+
+#template-widget {
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+#ava {
+    width: 100px;
+    height: 100px;
+}
+
+#widget {
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+#widget:hover {
+    transform: scale(1.1);
+}
+
+#sec-section {
+    height: 40vw;
+}
+
+#button-fac {
+    width: 650px;
+    height: 100px;
+    background: oklch(92.4% 0.12 95.746);
+    border-radius: 18px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#button-fac:active {
+    filter: brightness(90%);
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+#video-section {
+    height: 60vw;
+}
+
+#feedback-submission {
+    height: 45vw;
+}
+
+#form-point {
+    display: flex;
+    flex-direction: column;
+}
+
+#form-point input {
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+#form-point label {
+    margin-left: 10px;
+    font-size: 19px;
+}
+
+#form-point input, #form-point textarea {
+    border-radius: 4px;
+}
+
+#form-point input {
+    height: 30px;
+    padding-left: 20px;
+}
+
+#form-point-ex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#form-point-ex label {
+    font-size: 19px;
+    padding-left: 7px;
+}
+
+#form-point-ex input {
+    text-align: right;
+    color: gray;
+    padding-right: 7px;
+}
+
+#form-point textarea {
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+    height: 200px;
+    padding: 10px;
+}
