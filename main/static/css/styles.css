@@ -133,3 +133,11 @@ body {
     height: 200px;
     padding: 10px;
 }
+
+@media screen and (max-width: 600px) {
+    * {
+        box-sizing: 0;
+        padding: 0;
+        margin: 0;
+    }
+}
