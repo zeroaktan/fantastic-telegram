@@ -134,6 +134,11 @@ body {
     padding: 10px;
 }
 
+#uni-logo {
+    height: 150px;
+    width: 400px;
+}
+
 @media screen and (max-width: 1615px) {
     #second-section {
         padding: 30%;

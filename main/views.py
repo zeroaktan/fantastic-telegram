@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Feedback, Faculty
+from .models import Feedback, Faculty, University
 from django.core.paginator import Paginator
 from .forms import FeedbackSubmission
 
@@ -32,3 +32,8 @@ def selected(request, slug):
         form = FeedbackSubmission()
     return render(request, 'main/selected.html', {'video': video_url,
                                                   'form': form})
+
+
+def select_uni(request):
+    uni = University.objects.all()
+    return render(request, 'main/select_uni.html', {'uni': uni})

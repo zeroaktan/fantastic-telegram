@@ -8,6 +8,9 @@ class University(models.Model):
 
     class Meta:
         ordering = ['uni_name']
+        indexes = [models.Index(fields = ['uni_name'])]
+        verbose_name = 'university'
+        verbose_name_plural = 'universities'
 
     def get_absolute_url(self):
         return reverse('main:select_uni', args = [self.slug])
@@ -37,6 +40,9 @@ class Faculty(models.Model):
 
     class Meta:
         ordering = ['name']
+        indexes = [models.Index(fields = ['name'])]
+        verbose_name = 'faculty'
+        verbose_name_plural = 'faculties'
 
     def get_absolute_url(self):
         return reverse("main:select_by_faculty", args = [self.slug])
