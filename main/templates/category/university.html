@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}Выберите университет{% endblock title %}
+
+{% block content %}
+    <section class="pt-10 flex justify-between items-center mx-50">
+        <p class="text-[70px] leading-none text-center font-extrabold ">Watch your desired university's lessons live</p>
+        <img src="{% static 'images/uni.png' %}">
+    </section>
+    <section class="h-[700px] flex flex-col justify-evenly items-center px-50 py-10 bg-primary/10">
+        <p class="text-4xl font-bold">Choose your favorite university</p>
+        <div class="w-full h-full flex gap-12 items-start justify-center mt-24 flex-row">
+            <div class="flex justify-center items-start w-1/5">
+                <ul class="flex flex-col gap-2 w-full">
+                    {% for c in categories %}
+                        <li {% if category.slug == c.slug %}id="selected"{% endif %} class="rounded-md p-5 bg-primary/30 w-full active:bg-primary-l active:text-white">
+                            <a class="text-xl font-bold" href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="h-6/7 w-[2px] bg-zinc-700"></div>
+            <div class="w-[500px]">
+                <div class="" id="product-list">
+                    <div class="flex flex-col gap-2 w-full" id="items">
+                        {% for product in products %}
+                            <div class="rounded-md p-5 bg-primary/30 w-full active:bg-primary-l active:text-white" id="item">
+                                <a href="{{ product.get_absolute_url }}" class="text-2xl" >{{ product.name }}</a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

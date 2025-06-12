@@ -1,39 +1,21 @@
-from django.shortcuts import render, get_object_or_404, redirect
-from .models import Feedback, Faculty, University
-from django.core.paginator import Paginator
-from .forms import FeedbackSubmission
+from django.shortcuts import render, get_object_or_404
+from .models import Product, Category
 
 def main_land(request):
-    page = request.GET.get('page', 1)
-    feedbacks = Feedback.objects.all()
-    paginator = Paginator(feedbacks, 5)
-    currentpage = paginator.page(int(page))
-    return render(request, 'main/index.html', {'feedbacks': feedbacks,
-                                               'paginator': currentpage,})
+    return render(request, 'main/index.html')
 
+def product_detail(request, slug):
+    product = get_object_or_404(Product, slug = slug)
+    return render(request, 'product/detail.html', {'product': product})
 
-def selection(request):
-    faculty = Faculty.objects.all()
-    return render(request, 'main/select.html', {'faculty': faculty})
-
-
-
-def selected(request, slug):
-    video_url = Faculty.objects.filter(slug=slug).first()
-    if request.method == "POST":
-        form = FeedbackSubmission(request.POST, request.FILES)
-        print("Form valid?", form.is_valid())
-        if form.is_valid():
-            print("POST data:", request.POST)
-            print("FILES data:", request.FILES)
-            form.save()
-            return render('main/added.html')
-    else:
-        form = FeedbackSubmission()
-    return render(request, 'main/selected.html', {'video': video_url,
-                                                  'form': form})
-
-
-def select_uni(request):
-    uni = University.objects.all()
-    return render(request, 'main/select_uni.html', {'uni': uni})
+def product_list(request, category_slug = None):
+    category = None
+    categories = Category.objects.all()
+    products = Product.objects.all()
+    if category_slug:
+        category = get_object_or_404(Category, slug = category_slug)
+        products = Product.objects.filter(category=category)
+    return render(request, 'category/university.html', {'category': category,
+                                                        'categories': categories,
+                                                        'products': products,
+                                                        'slug_url': category_slug})

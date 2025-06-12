@@ -162,3 +162,8 @@ body {
         display: none;
     }
 }
+
+#selected {
+    background-color: #073B4C;
+    color: white;
+}
