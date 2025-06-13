@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-04 12:40+0500\n"
+"POT-Creation-Date: 2025-06-13 10:29+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,9 +17,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
-#: .\main\templates\main\base.html:39
+
+#: .\main\templates\base.html:39
 msgid "Get Started"
 msgstr "Бастау"
+
+#: .\main\templates\category\university.html:9
+msgid "Watch your desired university's lessons live"
+msgstr "Өзіңіз қалаған университет сабақтарын тікелей эфирде көріңіз"
+
+#: .\main\templates\category\university.html:13
+msgid "Choose your favorite university"
+msgstr "Өзіңізге ұнайтын университетті таңдаңыз"
 
 #: .\main\templates\main\index.html:10
 msgid "Find your passion, follow your path"
@@ -42,7 +51,9 @@ msgid ""
 "As choosing a profession is a crucial moment in applicants' life, we are "
 "taking it on another level. Our platform provides its clients attend virtual "
 "classes of colleges to explore the routine of future specialists."
-msgstr "Мамандық таңдау – әрбір абитуриент үшін маңызды сәт. Біз бұл процесті жаңа деңгейге көтереміз"
+msgstr ""
+"Мамандық таңдау – әрбір абитуриент үшін маңызды сәт. Біз бұл процесті жаңа "
+"деңгейге көтереміз"
 
 #: .\main\templates\main\index.html:23
 msgid "Real-Time Classroom Access"
@@ -52,7 +63,9 @@ msgstr "Шынайы уақыт режиміндегі сабақтарға қо
 msgid ""
 "Stream real university courses directly from the classroom. Experience the "
 "teaching style and content firsthand."
-msgstr "Университет сабақтарын тікелей сыныптан трансляциялаңыз. Оқытушылардың стилі мен мазмұнын тікелей сезініп, шынайы оқу процесіне еніңіз."
+msgstr ""
+"Университет сабақтарын тікелей сыныптан трансляциялаңыз. Оқытушылардың стилі "
+"мен мазмұнын тікелей сезініп, шынайы оқу процесіне еніңіз."
 
 #: .\main\templates\main\index.html:28
 msgid "Review System"
@@ -62,7 +75,9 @@ msgstr "Пікірлер жүйесі"
 msgid ""
 "Leave reviews after attending virtual classes. Share your impressions and "
 "help others make informed decisions."
-msgstr "Виртуалды сабақтарға қатысқаннан кейін пікір қалдырыңыз. Өз әсерлеріңізбен бөлісіп, басқалардың саналы таңдау жасауына көмектесіңіз."
+msgstr ""
+"Виртуалды сабақтарға қатысқаннан кейін пікір қалдырыңыз. Өз әсерлеріңізбен "
+"бөлісіп, басқалардың саналы таңдау жасауына көмектесіңіз."
 
 #: .\main\templates\main\index.html:33
 msgid "Competetive Ranking"
@@ -72,63 +87,22 @@ msgstr "Бәсекелестік рейтингі"
 msgid ""
 "Compare your ratings with others. See how courses you've attended stack up "
 "against ones you haven't explored yet."
-msgstr "Өз бағаларыңызды басқалармен салыстырыңыз. Сіз өткен курстарды әлі зерттелмеген курстармен салыстырып, білім деңгейіңізді анықтаңыз."
+msgstr ""
+"Өз бағаларыңызды басқалармен салыстырыңыз. Сіз өткен курстарды әлі "
+"зерттелмеген курстармен салыстырып, білім деңгейіңізді анықтаңыз."
 
-#: .\main\templates\main\index.html:39
-msgid "Feedback of Our Users"
-msgstr "Пайдаланушыларымыздың пікірлері"
-
-#: .\main\templates\main\select.html:11
-msgid "Select a faculty & Attend its classes in real time"
-msgstr "Факультетті таңдаңыз және оның сабақтарына шынайы уақыт режимінде қатысыңыз"
-
-#: .\main\templates\main\select.html:12
+#: .\main\templates\product\detail.html:10
 msgid ""
-"Our team specializes in career guidance for applicants, helping them "
-"confidently choose a profession and the right university. We analyze their "
-"interests, strengths, and skills to identify the direction where they have "
-"the best chance to succeed and feel fulfilled."
-msgstr "Біздің команда талапкерлерге кәсіби бағдар беру бойынша маманданған. Біз олардың қызығушылықтарын, күшті жақтары мен қабілеттерін талдай отырып, өздерін сенімді әрі табысты сезінетін бағытты анықтауға көмектесеміз."
-
-#: .\main\templates\main\select.html:16
-msgid "Select Your Desired Specialty"
-msgstr "Қалаған мамандығыңызды таңдаңыз"
-
-#: .\main\templates\main\selected.html:13
-msgid "Enjoy watching!"
-msgstr "Қараудан ләззат алыңыз!"
-
-#: .\main\templates\main\selected.html:15
-msgid "If chosen video isn't playable, you may watch the video on YouTube"
+"In case the video player is not working, you can still watch it on YouTube"
 msgstr "Егер таңдалған видео ойнатылмаса, оны YouTube арқылы көре аласыз"
 
-#: .\main\templates\main\selected.html:17
-msgid "Continue Watching"
-msgstr "Көруді жалғастырыңыз"
+#: .\main\templates\product\detail.html:11
+msgid "Press the button below to get to YouTube"
+msgstr "YouTube сайтына өту үшін төмендегі түймені басыңыз"
 
-#: .\main\templates\main\selected.html:24
-msgid "Leave your opinion, We appreciate it"
-msgstr "Өз ойыңызды қалдырыңыз, біз оны бағалаймыз"
-
-#: .\main\templates\main\selected.html:28
-msgid "Full Name"
-msgstr "Толық аты-жөніңіз"
-
-#: .\main\templates\main\selected.html:32
-msgid "Your Opinion"
-msgstr "Сіздің пікіріңіз"
-
-#: .\main\templates\main\selected.html:36
-msgid "Choose Image"
-msgstr "Суретті таңдаңыз"
-
-#: .\main\templates\main\selected.html:40
-msgid "Rate us out of 5 stars"
-msgstr "Бізді 5 жұлдыздан бағалаңыз"
-
-#: .\main\templates\main\selected.html:44
-msgid "Submit Feedback"
-msgstr "Кері байланысыңызды жіберіңіз"
+#: .\main\templates\product\detail.html:14
+msgid "Go to YouTube"
+msgstr "YouTube сайтына өтіңіз"
 
 #: .\pathfinder\settings.py:121
 msgid "Russian"
@@ -141,3 +115,48 @@ msgstr "English"
 #: .\pathfinder\settings.py:123
 msgid "Kazakh"
 msgstr "Қазақ"
+
+#~ msgid "Feedback of Our Users"
+#~ msgstr "Пайдаланушыларымыздың пікірлері"
+
+#~ msgid "Select a faculty & Attend its classes in real time"
+#~ msgstr ""
+#~ "Факультетті таңдаңыз және оның сабақтарына шынайы уақыт режимінде "
+#~ "қатысыңыз"
+
+#~ msgid ""
+#~ "Our team specializes in career guidance for applicants, helping them "
+#~ "confidently choose a profession and the right university. We analyze "
+#~ "their interests, strengths, and skills to identify the direction where "
+#~ "they have the best chance to succeed and feel fulfilled."
+#~ msgstr ""
+#~ "Біздің команда талапкерлерге кәсіби бағдар беру бойынша маманданған. Біз "
+#~ "олардың қызығушылықтарын, күшті жақтары мен қабілеттерін талдай отырып, "
+#~ "өздерін сенімді әрі табысты сезінетін бағытты анықтауға көмектесеміз."
+
+#~ msgid "Select Your Desired Specialty"
+#~ msgstr "Қалаған мамандығыңызды таңдаңыз"
+
+#~ msgid "Enjoy watching!"
+#~ msgstr "Қараудан ләззат алыңыз!"
+
+#~ msgid "Continue Watching"
+#~ msgstr "Көруді жалғастырыңыз"
+
+#~ msgid "Leave your opinion, We appreciate it"
+#~ msgstr "Өз ойыңызды қалдырыңыз, біз оны бағалаймыз"
+
+#~ msgid "Full Name"
+#~ msgstr "Толық аты-жөніңіз"
+
+#~ msgid "Your Opinion"
+#~ msgstr "Сіздің пікіріңіз"
+
+#~ msgid "Choose Image"
+#~ msgstr "Суретті таңдаңыз"
+
+#~ msgid "Rate us out of 5 stars"
+#~ msgstr "Бізді 5 жұлдыздан бағалаңыз"
+
+#~ msgid "Submit Feedback"
+#~ msgstr "Кері байланысыңызды жіберіңіз"
