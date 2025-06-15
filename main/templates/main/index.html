@@ -5,34 +5,40 @@
 {% block title %}Главная страница{% endblock title %}
 
 {% block content %}
-    <section class="flex justify-between items-center mx-50" id="first-section">
-        <div class="flex flex-col">
-            <p class="text-[100px] font-extrabold leading-none">{% trans 'Find your passion, follow your path'%}<p/>
-            <a href="{% url 'main:product_list' %}"><button class="text-2xl mt-8 bg-primary hover:bg-primary-l/95 text-white transition-all duration-500
-            px-10 hover:px-14 py-5 rounded-[300px] cursor-pointer" id="btn-tests">{%trans 'Start'%}</button></a>
+    <section class="flex flex-col md:flex-row justify-between items-center mx-3 md:mx-50 h-[calc(85dvh)]" id="first-section">
+        <div class="md:hidden block bg-primary w-full h-full my-8 flex justify-center items-end rounded-3xl">
+            <img src="{% static 'images/girl_grad.png' %}" class="h-[450px] mt-16 -scale-x-100">
         </div>
-        <img src="{% static 'images/girl_grad.png' %}" class="h-[700px]">
+        <div class="flex flex-col">
+            <p class="text-[44px] md:text-[100px] font-extrabold leading-none">{% trans 'Find your passion, follow your path'%}<p/>
+            <a href="{% url 'main:product_list' %}"><button class="text-2xl mt-8 bg-primary hover:bg-primary-l/95 text-white transition-all duration-500 font-semibold
+            px-12 py-4 rounded-3xl md:rounded-[300px] cursor-pointer" id="btn-tests">{% trans 'Start'%}</button></a>
+        </div>
+        <img src="{% static 'images/girl_grad.png' %}" class="hidden md:block h-[700px]">
     </section>
-    <section class="flex justify-center flex-col items-center px-50 bg-primary/10" id="second-section">
-        <button class="font-semibold px-4 py-1 text-[20px] bg-primary/30 text-primary-l/80 rounded-lg">{%trans 'Key Features'%}</button>
-        <p class="text-4xl font-bold mt-4 text-center">{% trans 'Experience University Routine, Unnecessary to Apply'%}</p>
-        <p class="text-lg text-center leading-[25px] mt-3">{%trans "As choosing a profession is a crucial moment in applicants' life, we are taking it on another level. Our platform provides its clients attend virtual classes of colleges to explore the routine of future specialists."%}</p>
-        <div class="flex items-center justify-center w-full my-15">
+    <section class="flex flex-col md:h-[35vw] gap-10 justify-center items-center pt-12 md:px-50 mt-20 bg-primary/10 px-2">
+        <button class="font-semibold px-4 py-1 text-[20px] bg-primary/30 text-primary-l/80 rounded-lg">{% trans "Key Features" %}</button>
+        <p class="text-4xl font-bold md:mt-4 text-center">{% trans "Experience University Routine, Unnecessary to Apply" %}</p>
+        <p class="text-lg md:text-center leading-[25px] md:mt-3 hidden md:block">{%trans "As choosing a profession is a crucial moment in applicants' life, we are taking it on another level. Our platform provides its clients attend virtual classes of colleges to explore the routine of future specialists."%}</p>
+        
+        <div class="flex flex-col gap-12 md:gap-0 md:flex-row items-center justify-center w-full mt-4 mb-10">
             <div id="feature">
                 <img src="{% static 'images/icon1.png' %}" class="w-18">
-                <p id="text" class="">{%trans 'Real-Time Classroom Access'%}</p>
+                <p class="leading-none" id="text" class="">{%trans 'Real-Time Classroom Access'%}</p>
                 <p class="text-[17px]">{%trans 'Stream real university courses directly from the classroom. Experience the teaching style and content firsthand.'%}</p>
             </div>
             <div id="feature">
                 <img src="{% static 'images/icon2.png' %}" class="w-18">
-                <p id="text" class="w-max">{%trans 'Review System'%}</p>
+                <p class="leading-none" id="text" class="w-max">{%trans 'Review System'%}</p>
                 <p class="text-[17px]">{%trans 'Leave reviews after attending virtual classes. Share your impressions and help others make informed decisions.'%}</p>
             </div>
             <div id="feature">
                 <img src="{% static 'images/icon3.png' %}" class="w-18">
-                <p id="text" class="w-max">{%trans 'Competetive Ranking'%}</p>
+                <p class="leading-none" id="text" class="w-max">{%trans 'Competetive Ranking'%}</p>
                 <p class="text-[17px]">{% trans "Compare your ratings with others. See how courses you've attended stack up against ones you haven't explored yet."%}</p>
             </div>
         </div>
     </section>
+    <div class="hidden md:block h-24">
+    </div>
 {% endblock content %}

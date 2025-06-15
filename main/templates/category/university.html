@@ -5,36 +5,36 @@
 {% block title %}Выберите университет{% endblock title %}
 
 {% block content %}
-    <section class="pt-10 flex justify-between items-center mx-50">
-        <p class="text-[70px] leading-none text-center font-extrabold ">{% trans "Watch your desired university's lessons live" %}</p>
-        <img src="{% static 'images/uni.png' %}">
+    <section class="pt-10 flex flex-col md:flex-row justify-between items-center md:mx-50">
+        <p class="text-[42px] md:text-[70px] leading-none text-center font-extrabold py-4 px-1">{% trans "Watch your desired university's lessons live" %}</p>
+        <div class="bg-primary p-5 rounded-4xl mx-3 mt-6">
+            <img class="rounded-4xl" src="{% static 'images/uni.png' %}">
+        </div>
     </section>
-    <section class="h-[700px] flex flex-col justify-evenly items-center px-50 py-10 bg-primary/10">
+    <section class="mt-12 md:h-[700px] flex flex-col md:justify-evenly items-center text-center py-6 md:px-50 md:py-10 bg-primary/10">
         <p class="text-4xl font-bold">{% trans 'Choose your favorite university'%}</p>
-        <div class="w-full h-full flex gap-12 items-start justify-center mt-24 flex-row">
-            <div class="flex justify-center items-start w-1/5">
-                <ul class="flex flex-col gap-2 w-full">
+        <div class="w-full h-full flex flex-col mt-8 justify-start md:justify-center items-center md:flex-row gap-12 items-start justify-center md:mt-24">
+            <div class="flex w-full p-4 justify-center items-start md:w-1/5">
+                <ul class="flex flex-col justify-center items-center gap-2 w-full">
                     {% for c in categories %}
-                        <a class="text-xl font-bold" href="{{ c.get_absolute_url }}">
-                            <li {% if category.slug == c.slug %}id="selected"{% endif %} class="rounded-md p-5 bg-primary/30 w-full active:bg-primary-l active:text-white">
+                        <li {% if category.slug == c.slug %}id="selected"{% endif %} class="rounded-xl p-5 bg-primary/30 w-full active:bg-primary-l active:text-white text-center">
+                            <a class="text-xl font-bold w-full" href="{{ c.get_absolute_url }}">
                                 {{ c.name }}
-                            </li>
-                        </a>
+                            </a>
+                        </li>
                     {% endfor %}
                 </ul>
             </div>
-            <div class="h-6/7 w-[2px] bg-zinc-700"></div>
-            <div class="w-[500px]">
+            <div class="hidden md:block h-6/7 w-[2px] bg-zinc-700"></div>
+            <div class="w-full p-4 md:w-[500px]">
                 <div class="" id="product-list">
                     <div class="flex flex-col gap-2 w-full" id="items">
                         {% for product in products %}
-                            {% if product.get_absolute_url %}
-                                <a href="{{ product.get_absolute_url }}" class="text-2xl" >    
-                                    <div class="rounded-md p-5 bg-primary/30 w-full active:bg-primary-l active:text-white" id="item">
-                                        {{ product.name }}
-                                    </div>
-                                </a>
-                            {% endif %}
+                        <a href="{{ product.get_absolute_url }}" class="text-2xl" >    
+                            <div class="rounded-md p-5 bg-primary/30 w-full active:bg-primary-l active:text-white" id="item">
+                                {{ product.name }}
+                            </div>
+                        </a>
                         {% endfor %}
                     </div>
                 </div>
