@@ -28,11 +28,13 @@
                 <div class="" id="product-list">
                     <div class="flex flex-col gap-2 w-full" id="items">
                         {% for product in products %}
-                        <a href="{{ product.get_absolute_url }}" class="text-2xl" >    
-                            <div class="rounded-md p-5 bg-primary/30 w-full active:bg-primary-l active:text-white" id="item">
-                                {{ product.name }}
-                            </div>
-                        </a>
+                            {% if product.get_absolute_url %}
+                                <a href="{{ product.get_absolute_url }}" class="text-2xl" >    
+                                    <div class="rounded-md p-5 bg-primary/30 w-full active:bg-primary-l active:text-white" id="item">
+                                        {{ product.name }}
+                                    </div>
+                                </a>
+                            {% endif %}
                         {% endfor %}
                     </div>
                 </div>
