@@ -19,10 +19,6 @@ body {
     width: 100%;
 }
 
-#second-section {
-    height: 35vw;
-}
-
 #feature {
     display: flex;
     flex-direction: column;
@@ -60,10 +56,6 @@ body {
 
 #widget:hover {
     transform: scale(1.1);
-}
-
-#sec-section {
-    height: 40vw;
 }
 
 #button-fac {

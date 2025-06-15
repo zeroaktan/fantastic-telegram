@@ -5,7 +5,9 @@
 {% block title %}{{ product.name }}{% endblock title %}
 
 {% block content %}
-    <section class="pt-10 flex flex-col justify-between items-center gap-5 px-50">
+    <section class="pt-10 flex flex-col justify-between items-center gap-5 text-center px-2 md:px-50 bg-primary/10 h-[95lvh] md:h-auto">
+        <h1 class="text-3xl font-bold mb-6">{{ product.name }}</h1>
+        <iframe class="h-6/7 aspect-[18/9] w-full rounded-lg " src="{{ product.link }}"></iframe>
         <div class="flex flex-col justify-between items-center gap-1">
             <p class="text-2xl font-bold">{% trans "In case the video player is not working, you can still watch it on YouTube"%}</p>
             <p class="text-xl">{% trans 'Press the button below to get to YouTube'%}</p>
@@ -14,8 +16,5 @@
             <button class="p-5 cursor-pointer font-bold rounded-md bg-primary/30 hover:bg-primary/50 active:bg-primary-l active:text-white">{% trans "Go to YouTube"%}</button>
         </a>
         <img src="{% static 'images/enjoy.png' %}">
-    </section>
-    <section class="h-[700px] px-20 flex justify-center items-center bg-primary/10">
-        <iframe class="h-6/7 w-full rounded-lg " src="{{ product.link }}"></iframe>
     </section>
 {% endblock content %}

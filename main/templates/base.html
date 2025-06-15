@@ -19,10 +19,10 @@
     </style>
 </head>
 <body>
-    <header id="header-nav" class="my-8 flex items-center justify-between mx-50">
-        <a href="{% url 'main:main_land' %}"><img src="{% static 'images/logo.png' %}" class="w-[250px] h-[42px] cursor-pointer"></a>
+    <header id="header-nav" class="my-4 md:my-8 flex items-center justify-between mx-4 md:mx-50">
+        <a href="{% url 'main:main_land' %}"><img src="{% static 'images/logo.png' %}" class="aspect-[1125/195] max-w-[200px] md:max-w-[250px] cursor-pointer"></a>
         <div class="flex flex-row justify-center items-center gap-10">
-            <form action="{% url 'set_language' %}" method="post" class="cursor-pointer h-max w-max">
+            <form action="{% url 'set_language' %}" method="post" class="cursor-pointer h-max w-max flex justify-center items-center mt-1">
                 {% csrf_token %}
                 <input name="next" type="hidden" value="{{ redirect_to }}">
                 <select class="font-semibold text-lg appearance-none cursor-pointer flex justify-center items-center text-center" name="language" onchange='if(this.value != 0) { this.form.submit(); }'>
@@ -36,7 +36,7 @@
                     {% endfor %}
                 </select>
             </form>
-            <a href="{% url 'main:product_list' %}"><button class="bg-primary hover:bg-primary-l transition-all duration-400 ease-in-out text-white p-4 w-[150px] rounded-4xl text-lg weight-bold sticky-top cursor-pointer">{%trans "Get Started"%}</button></a>
+            <a class="hidden md:block" href="{% url 'main:product_list' %}"><button class="bg-primary hover:bg-primary-l transition-all duration-400 ease-in-out text-white p-4 w-[150px] rounded-4xl text-lg weight-bold sticky-top cursor-pointer">{%trans "Get Started"%}</button></a>
         </div>
     </header>
     {% block content %}
