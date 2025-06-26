@@ -5,17 +5,51 @@
 {% block title %}Главная страница{% endblock title %}
 
 {% block content %}
-    <section class="flex flex-col md:flex-row justify-between items-center mx-3 md:mx-50 h-[calc(85dvh)]" id="first-section">
-        <div class="md:hidden block bg-primary w-full h-full my-8 flex justify-center items-end rounded-3xl">
-            <img src="{% static 'images/girl_grad.png' %}" class="h-[450px] mt-16 -scale-x-100">
+    <section 
+    class="flex flex-col md:flex-row justify-between items-stretch px-3 md:px-12 w-full max-h-[85dvh] min-h-[60vh]" 
+    id="first-section"
+    style="height: 85dvh;"
+    >
+    <!-- Mobile: Image block fills remaining space, Desktop: 1/2 width -->
+        <div 
+        class="flex-1 md:hidden flex flex-col justify-end items-center bg-primary w-full my-8 rounded-3xl overflow-hidden min-h-0"
+        >
+            <img 
+            src="{% static 'images/girl_grad.png' %}" 
+            class="object-contain w-full h-full mt-16 -scale-x-100"
+            style="max-height:100%;"
+            alt="Graduation Girl"
+            >
         </div>
-        <div class="flex flex-col">
-            <p class="text-[44px] md:text-[100px] font-extrabold leading-none">{% trans 'Find your passion, follow your path'%}<p/>
-            <a href="{% url 'main:product_list' %}"><button class="text-2xl mt-8 bg-primary hover:bg-primary-l/95 text-white transition-all duration-500 font-semibold
-            px-12 py-4 rounded-3xl md:rounded-[300px] cursor-pointer" id="btn-tests">{% trans 'Start'%}</button></a>
+    <!-- Content Block -->
+        <div 
+        class="flex flex-col justify-center h-auto md:h-full md:w-1/2 flex-shrink-0"
+        >
+            <p class="text-[44px] md:text-[100px] font-extrabold leading-none">
+            {% trans 'Find your passion, follow your path' %}
+            </p>
+            <a href="{% url 'main:product_list' %}">
+                <button 
+                    class="text-2xl mt-8 bg-primary hover:bg-primary-l/95 text-white transition-all duration-500 font-semibold px-12 py-4 rounded-3xl md:rounded-[300px] cursor-pointer" 
+                    id="btn-tests"
+                >
+                    {% trans 'Start' %}
+                </button>
+            </a>
         </div>
-        <img src="{% static 'images/girl_grad.png' %}" class="hidden md:block h-[700px]">
+    <!-- Desktop: Image block, 1/2 width -->
+        <div class="hidden md:flex flex-col flex-1 justify-end items-center rounded-3xl min-h-0">
+            <img 
+            src="{% static 'images/girl_grad.png' %}" 
+            class="object-contain w-full flex-1"
+            style="max-height:100%;"
+            alt="Graduation Girl"
+            >
+            <div class="min-h-[20px] max-h-[20px] w-full rounded-lg bg-primary">
+            </div>
+        </div>
     </section>
+
     <section class="flex flex-col md:h-[35vw] gap-10 justify-center items-center pt-12 md:px-50 mt-20 bg-primary/10 px-2">
         <button class="font-semibold px-4 py-1 text-[20px] bg-primary/30 text-primary-l/80 rounded-lg">{% trans "Key Features" %}</button>
         <p class="text-4xl font-bold md:mt-4 text-center">{% trans "Experience University Routine, Unnecessary to Apply" %}</p>
